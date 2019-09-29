@@ -13,7 +13,9 @@
 		612FDB4A233CF32F00F91FB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 612FDB49233CF32F00F91FB5 /* Assets.xcassets */; };
 		612FDB4D233CF32F00F91FB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 612FDB4C233CF32F00F91FB5 /* Preview Assets.xcassets */; };
 		612FDB50233CF32F00F91FB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612FDB4E233CF32F00F91FB5 /* LaunchScreen.storyboard */; };
-		612FDB5B233CF32F00F91FB5 /* MazesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612FDB5A233CF32F00F91FB5 /* MazesTests.swift */; };
+		61CF75532340D4D300C9C292 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CF75522340D4D300C9C292 /* CellView.swift */; };
+		61CF75552340D4F600C9C292 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CF75542340D4F600C9C292 /* Cell.swift */; };
+		61CF75572340D52100C9C292 /* CellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CF75562340D52100C9C292 /* CellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +38,10 @@
 		612FDB4F233CF32F00F91FB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		612FDB51233CF32F00F91FB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		612FDB56233CF32F00F91FB5 /* MazesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		612FDB5A233CF32F00F91FB5 /* MazesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazesTests.swift; sourceTree = "<group>"; };
 		612FDB5C233CF32F00F91FB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61CF75522340D4D300C9C292 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		61CF75542340D4F600C9C292 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		61CF75562340D52100C9C292 /* CellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			children = (
 				612FDB43233CF32E00F91FB5 /* AppDelegate.swift */,
 				612FDB45233CF32E00F91FB5 /* SceneDelegate.swift */,
+				61CF75512340D4BB00C9C292 /* components */,
 				612FDB47233CF32E00F91FB5 /* ContentView.swift */,
 				612FDB49233CF32F00F91FB5 /* Assets.xcassets */,
 				612FDB4E233CF32F00F91FB5 /* LaunchScreen.storyboard */,
@@ -101,10 +106,27 @@
 		612FDB59233CF32F00F91FB5 /* MazesTests */ = {
 			isa = PBXGroup;
 			children = (
-				612FDB5A233CF32F00F91FB5 /* MazesTests.swift */,
+				61CF754C2340D43400C9C292 /* components */,
 				612FDB5C233CF32F00F91FB5 /* Info.plist */,
 			);
 			path = MazesTests;
+			sourceTree = "<group>";
+		};
+		61CF754C2340D43400C9C292 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				61CF75562340D52100C9C292 /* CellTests.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		61CF75512340D4BB00C9C292 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				61CF75542340D4F600C9C292 /* Cell.swift */,
+				61CF75522340D4D300C9C292 /* CellView.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61CF75532340D4D300C9C292 /* CellView.swift in Sources */,
 				612FDB44233CF32E00F91FB5 /* AppDelegate.swift in Sources */,
+				61CF75552340D4F600C9C292 /* Cell.swift in Sources */,
 				612FDB46233CF32E00F91FB5 /* SceneDelegate.swift in Sources */,
 				612FDB48233CF32E00F91FB5 /* ContentView.swift in Sources */,
 			);
@@ -218,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				612FDB5B233CF32F00F91FB5 /* MazesTests.swift in Sources */,
+				61CF75572340D52100C9C292 /* CellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
