@@ -18,45 +18,43 @@ class CellTests: XCTestCase {
     }
     
     func test_AddLinkToCell() {
-        // Setup.
+        // Setup - Create different cells.
         let cell1 = Cell(row: 0, col: 0)
         let cell2 = Cell(row: 0, col: 1)
-        let cell3 = Cell(row: 0, col: 2)
 
-        // Perform action.
+        // Action - Link cells.
         cell1.addLink(to: cell2)
         
-        // Confirm expectations.
+        // Result - Two way link between cells.
         XCTAssertTrue(cell1.isLinked(to: cell2))
         XCTAssertTrue(cell2.isLinked(to: cell1))
-        XCTAssertFalse(cell1.isLinked(to: cell3))
     }
     
     func test_CannotLinkToSelf() {
-        // Setup.
+        // Setup - Create two identical cells.
         let cell1a = Cell(row: 0, col: 0)
         let cell1b = Cell(row: 0, col: 0)
 
-        // Perform action.
+        // Action - Link cells.
         cell1a.addLink(to: cell1b)
         
-        // Confirm expectations.
+        // Result - Neither cell linked to other.
         XCTAssertFalse(cell1a.isLinked(to: cell1b))
         XCTAssertFalse(cell1b.isLinked(to: cell1a))
     }
     
     func test_RemoveLinkFromLinkedCell() {
-        // Setup.
+        // Setup - Create and link two cells (and confirm links exist).
         let cell1 = Cell(row: 0, col: 0)
         let cell2 = Cell(row: 0, col: 1)
         cell1.addLink(to: cell2)
         XCTAssertTrue(cell1.isLinked(to: cell2))
         XCTAssertTrue(cell2.isLinked(to: cell1))
         
-        // Perform action.
+        // Action - Unlink cells.
         cell1.removeLink(to: cell2)
         
-        // Confirm interim expectations.
+        // Result - Cells are unlinked.
         XCTAssertFalse(cell1.isLinked(to: cell2))
         XCTAssertFalse(cell2.isLinked(to: cell1))
     }
