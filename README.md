@@ -1,2 +1,2 @@
 # Maze
-A exploration of mazes (sic) using Swift and iOS.
+A exploration (sic) of mazes using Swift and iOS.  Based heavily on the book "Mazes for Programmers" by Jamis Buck.

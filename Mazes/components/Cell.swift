@@ -17,10 +17,10 @@ class Cell {
     
     public private(set) var links: [Cell]
     
-    public private(set) var north: Cell?
-    public private(set) var south: Cell?
-    public private(set) var east: Cell?
-    public private(set) var west: Cell?
+    public var north: Cell?
+    public var south: Cell?
+    public var east: Cell?
+    public var west: Cell?
     
     // MARK: - Initialisers
     
@@ -41,10 +41,13 @@ class Cell {
         removeLink(to: cell, deleteReturnLink: true)
     }
     
-    public func isLinked(to cell: Cell) -> Bool {
+    /// Returns `true` if the other `Cell` is linked to this one, otherwise `false`.
+    /// - Parameter cell: The other cell.
+    public func isLinked(to cell: Cell?) -> Bool {
+        guard let cell = cell else { return false }
         return links.contains(cell)
     }
-    
+
     // MARK: - Private Functions
 
     /// Removes a link between this cell and another.
@@ -80,5 +83,11 @@ class Cell {
 extension Cell: Equatable {
     static func == (lhs: Cell, rhs: Cell) -> Bool {
         return lhs.row == rhs.row && lhs.col == rhs.col
+    }
+}
+
+extension Cell: CustomStringConvertible {
+    var description: String {
+        return "r\(self.row) c\(self.col)"
     }
 }
